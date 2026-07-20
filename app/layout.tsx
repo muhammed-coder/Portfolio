@@ -1,3 +1,4 @@
+// src/app/layout.tsx
 import type { Metadata } from "next";
 import "./globals.css";
 import CreativeBackground from "../components/CreativeBackground";
@@ -15,7 +16,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    // أضفنا scroll-smooth هنا عشان الحركة تصير ناعمة
+    <html lang="en" className="scroll-smooth"> 
       <body className="bg-slate-950 text-slate-100 antialiased font-sans relative min-h-screen">
         <LanguageProvider>
           <CreativeBackground />
